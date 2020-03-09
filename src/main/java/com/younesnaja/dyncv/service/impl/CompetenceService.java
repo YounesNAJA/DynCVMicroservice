@@ -1,6 +1,6 @@
-package com.younesnaja.dyncv.service;
+package com.younesnaja.dyncv.service.impl;
 
-import com.younesnaja.dyncv.dao.domain.Competence;
+import com.younesnaja.dyncv.dao.domain.impl.Competence;
 import com.younesnaja.dyncv.dao.repository.CompetenceRepository;
 import com.younesnaja.dyncv.exception.client.FormationNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import java.util.Optional;
 
 @Service
-public class CompetenceService {
+public class CompetenceService extends StandardServiceImpl<Competence> {
     private CompetenceRepository competenceRepository;
 
     public CompetenceRepository getCompetenceRepository() {
@@ -22,13 +22,8 @@ public class CompetenceService {
         this.competenceRepository = competenceRepository;
     }
 
-    /**
-     * Get formation by ID
-     * @param id
-     * @return
-     * @throws FormationNotFoundException
-     */
-    public Competence getCompetenceById(BigInteger id) throws FormationNotFoundException{
+    @Override
+    public Competence getById(BigInteger id) throws FormationNotFoundException {
         Optional<Competence> competence = competenceRepository.findById(id);
         if(!competence.isPresent()){
             throw new FormationNotFoundException(id);
@@ -37,11 +32,8 @@ public class CompetenceService {
         }
     }
 
-    /**
-     * Get all formations
-     * @return
-     */
-    public Iterable<Competence> getAllCompetence(){
-       return competenceRepository.findAll();
+    @Override
+    public Iterable getAll() {
+        return competenceRepository.findAll();
     }
 }

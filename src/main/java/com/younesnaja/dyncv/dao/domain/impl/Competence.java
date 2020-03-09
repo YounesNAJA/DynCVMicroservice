@@ -1,13 +1,11 @@
-package com.younesnaja.dyncv.dao.domain;
+package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigInteger;
 import java.util.List;
 
 @Document
-public class Competence extends StandardDomainObject {
+public class Competence extends StandardDomainObjectImpl {
 
     private String categorie;
 

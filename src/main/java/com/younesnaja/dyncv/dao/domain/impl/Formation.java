@@ -1,13 +1,11 @@
-package com.younesnaja.dyncv.dao.domain;
+package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigInteger;
 import java.util.Date;
 
 @Document
-public class Formation extends StandardDomainObject {
+public class Formation extends StandardDomainObjectImpl {
 
     private String etablissement;
 
