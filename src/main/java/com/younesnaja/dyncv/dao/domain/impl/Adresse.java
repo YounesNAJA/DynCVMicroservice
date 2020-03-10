@@ -2,10 +2,8 @@ package com.younesnaja.dyncv.dao.domain.impl;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.annotation.Resource;
-
 @Document
-public class Adresse extends StandardDomainObjectImpl {
+public class Adresse {
     private Integer numero;
     private String rue;
     private String complement;

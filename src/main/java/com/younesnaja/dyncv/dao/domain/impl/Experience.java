@@ -1,16 +1,23 @@
 package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;
 
-@Document
-public class Experience extends StandardDomainObjectImpl {
+public class Experience {
+    @JsonFormat(pattern="yyyy")
     private Date debut;
+
+    @JsonFormat(pattern="yyyy")
     private Date fin;
+
     private String titre;
+
     private Client client;
+
     private List<Projet> projets;
 
     public Date getDebut() {

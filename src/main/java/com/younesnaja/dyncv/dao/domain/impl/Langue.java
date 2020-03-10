@@ -1,9 +1,6 @@
 package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document
-public class Langue extends StandardDomainObjectImpl {
+public class Langue {
 
     private String nom;
 

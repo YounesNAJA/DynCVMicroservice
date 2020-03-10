@@ -1,11 +1,6 @@
 package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import javax.annotation.Resource;
-
-@Document
-public class Client extends StandardDomainObjectImpl {
+public class Client {
     private String nom;
     private String ville;
     private String pays;

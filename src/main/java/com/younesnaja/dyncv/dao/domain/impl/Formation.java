@@ -1,11 +1,12 @@
 package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-@Document
-public class Formation extends StandardDomainObjectImpl {
+public class Formation {
 
     private String etablissement;
 
@@ -15,9 +16,11 @@ public class Formation extends StandardDomainObjectImpl {
 
     private String option;
 
-    private Date annee_debut;
+    @JsonFormat(pattern="yyyy")
+    private Date anneeDebut;
 
-    private Date annee_fin;
+    @JsonFormat(pattern="yyyy")
+    private Date anneeFin;
 
     public String getEtablissement() {
         return etablissement;
@@ -51,19 +54,19 @@ public class Formation extends StandardDomainObjectImpl {
         this.option = option;
     }
 
-    public Date getAnnee_debut() {
-        return annee_debut;
+    public Date getAnneeDebut() {
+        return anneeDebut;
     }
 
-    public void setAnnee_debut(Date annee_debut) {
-        this.annee_debut = annee_debut;
+    public void setAnneeDebut(Date anneeDebut) {
+        this.anneeDebut = anneeDebut;
     }
 
-    public Date getAnnee_fin() {
-        return annee_fin;
+    public Date getAnneeFin() {
+        return anneeFin;
     }
 
-    public void setAnnee_fin(Date annee_fin) {
-        this.annee_fin = annee_fin;
+    public void setAnneeFin(Date anneeFin) {
+        this.anneeFin = anneeFin;
     }
 }

@@ -1,11 +1,8 @@
 package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.List;
 
-@Document
-public class Competence extends StandardDomainObjectImpl {
+public class Competence {
 
     private String categorie;
 

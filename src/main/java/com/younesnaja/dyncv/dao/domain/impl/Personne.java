@@ -11,10 +11,15 @@ public class Personne extends StandardDomainObjectImpl {
     private String titre;
     private String telephone;
     private String email;
+
     private Adresse adresse;
+
     private List<Experience> experiences;
+
     private List<Formation> formations;
+
     private List<Competence> competences;
+
     private List<Langue> langues;
 
     public String getNom() {

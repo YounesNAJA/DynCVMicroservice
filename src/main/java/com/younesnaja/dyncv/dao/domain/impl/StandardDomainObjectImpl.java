@@ -4,7 +4,6 @@ import com.younesnaja.dyncv.dao.domain.StandardDomainObject;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.annotation.Resource;
 import java.math.BigInteger;
 
 @Document
