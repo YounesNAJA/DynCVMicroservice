@@ -1,10 +1,7 @@
 package com.younesnaja.dyncv.dao.domain.impl;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.List;
 
-@Document
 public class Personne extends StandardDomainObjectImpl {
     private String nom;
     private String prenom;

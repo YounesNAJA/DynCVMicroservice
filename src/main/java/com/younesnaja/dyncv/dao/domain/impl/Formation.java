@@ -1,8 +1,6 @@
 package com.younesnaja.dyncv.dao.domain.impl;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 

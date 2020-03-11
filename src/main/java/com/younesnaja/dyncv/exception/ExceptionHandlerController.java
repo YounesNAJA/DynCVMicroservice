@@ -1,6 +1,6 @@
 package com.younesnaja.dyncv.exception;
 
-import com.younesnaja.dyncv.exception.client.FormationNotFoundException;
+import com.younesnaja.dyncv.exception.client.PersonneNotFoundException;
 import org.springframework.data.repository.support.QueryMethodParameterConversionException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,8 +11,8 @@ import java.io.IOException;
 @ControllerAdvice
 public class ExceptionHandlerController {
 
-    @ExceptionHandler(FormationNotFoundException.class)
-    public void handleFormationNotFound(FormationNotFoundException exception, HttpServletResponse response) throws IOException {
+    @ExceptionHandler(PersonneNotFoundException.class)
+    public void handleFormationNotFound(PersonneNotFoundException exception, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_NOT_FOUND, exception.getMessage());
     }
 

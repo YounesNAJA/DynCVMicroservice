@@ -1,9 +1,8 @@
 package com.younesnaja.dyncv.service.impl;
 
-import com.younesnaja.dyncv.dao.domain.impl.Formation;
 import com.younesnaja.dyncv.dao.domain.impl.Personne;
 import com.younesnaja.dyncv.dao.repository.PersonneRepository;
-import com.younesnaja.dyncv.exception.client.FormationNotFoundException;
+import com.younesnaja.dyncv.exception.client.PersonneNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,10 +22,10 @@ public class PersonneService {
         this.personneRepository = personneRepository;
     }
 
-    public Personne getById(BigInteger id) throws FormationNotFoundException {
+    public Personne getById(BigInteger id) throws PersonneNotFoundException {
         Optional<Personne> personne = personneRepository.findById(id);
         if(!personne.isPresent()){
-            throw new FormationNotFoundException(id);
+            throw new PersonneNotFoundException(id);
         } else {
             return personne.get();
         }
