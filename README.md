@@ -4,10 +4,10 @@ This repo is contains Dockerfile and all resources needed to build and run the C
 
 ## Pull the image from DockerHub
 
-Download the image file [here](https://hub.docker.com/r/younesnaja/cvmicroservicenode).
+Download the image file [here](https://hub.docker.com/r/younesnaja/younesnaja/dyncvmicroservice).
 
 ```docker
-docker image pull younesnaja/cvmicroservicenode:latest
+docker image pull younesnaja/dyncvmicroservice:latest
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ cd DynCVMicroservice
 ```
 
 ```linux
-nohup docker build -t cvmicroservicenode . &
+nohup docker build -t younesnaja/dyncvmicroservice:latest . &
 ```
 
 ##### You can read logs using the following command
@@ -36,7 +36,7 @@ tail -100f nohup.out
 Map 8080 port from the container to 80 port in the host machine
 
 ```docker
-nohup docker container run -p 8080:8080 cvmicroservicenode --name CVMicroserviceContainer &
+nohup docker container run -p 8080:8080 younesnaja/dyncvmicroservice:latest --name CVMicroserviceContainer &
 ```
 
 ## Contributing
