@@ -11,7 +11,6 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "*")
 @RepositoryRestResource(exported=false)
 public interface StandardRepository<T extends StandardDomainObjectImpl, ID> extends PagingAndSortingRepository<T, BigInteger> {
     @RestResource(path = "id", rel = "id")

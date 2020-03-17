@@ -17,9 +17,4 @@ public class PersonneController {
     public void setPersonneService(PersonneService personneService) {
         this.personneService = personneService;
     }
-
-    /*    @RequestMapping(path="formations/{id}", method=RequestMethod.GET, produces="application/hal+json")
-    public Formation getFormationById(@PathVariable("id") BigInteger id) {
-        return formationService.getFormationById(id);
-    }*/
 }
